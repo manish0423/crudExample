@@ -53,4 +53,3 @@ public class BookController
         return bookService.delete(id);
     }
 }
-    

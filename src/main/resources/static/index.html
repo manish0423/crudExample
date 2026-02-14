@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Book Management System</h1>
+        
+        <!-- Add/Update Book Form -->
+        <div class="form-container">
+            <h2 id="form-title">Add New Book</h2>
+            <form id="book-form">
+                <input type="hidden" id="book-id">
+                <div class="form-group">
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" required placeholder="Enter book title">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" required placeholder="Enter author name">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submit-btn">Add Book</button>
+                    <button type="button" id="cancel-btn" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Books List -->
+        <div class="books-container">
+            <h2>Books Library</h2>
+            <table id="books-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="books-tbody">
+                    <!-- Books will be loaded here -->
+                </tbody>
+            </table>
+            <p id="no-books" style="display: none;">No books in the library yet. Add your first book!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
